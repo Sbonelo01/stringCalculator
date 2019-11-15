@@ -1,5 +1,7 @@
-class stringCalculator{
-	function add(stringNumber) {
+"use strict";
+
+module.exports = class stringCalculator{
+	Add(stringNumber) {
 		// Return 0 if String is empty.
 		if (!stringNumber) return 0; 
 	                    
@@ -15,7 +17,7 @@ class stringCalculator{
 		var sum = 0,
 			neg = [];
 		
-		for (i = 0; i < splitString.length; i++) {
+		for (var i = 0; i < splitString.length; i++) {
 			if (parseInt(splitString[i]) < 0) neg.push(splitString[i]);
 			else if (splitString[i] < 1001) sum += parseInt(splitString[i]);
 		}
@@ -26,6 +28,3 @@ class stringCalculator{
 	}
 }
 
-module.exports = {
-	add
-}
