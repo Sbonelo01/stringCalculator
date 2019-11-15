@@ -1,28 +1,31 @@
-function add(stringNumber) {
-	// Return 0 if String is empty.
-	if (!stringNumber) return 0; 
-                    
-	if (stringNumber.indexOf("//") == 0) {
-		var delimiter = new RegExp("\n|,|" + stringNumber.substring(2, stringNumber.indexOf('\n'))),
-			subString = stringNumber.substring(stringNumber.indexOf('\n') + 1, stringNumber.length),
-			splitString = subString.split(delimiter);
-    			console.log(splitString);
-	} else {
-		var splitString = stringNumber.split(/,|\n/);
-	}
+class stringCalculator{
+	function add(stringNumber) {
+		// Return 0 if String is empty.
+		if (!stringNumber) return 0; 
+	                    
+		if (stringNumber.indexOf("//") == 0) {
+			var delimiter = new RegExp("\n|,|" + stringNumber.substring(2, stringNumber.indexOf('\n'))),
+				subString = stringNumber.substring(stringNumber.indexOf('\n') + 1, stringNumber.length),
+				splitString = subString.split(delimiter);
+	    			console.log(splitString);
+		} else {
+			var splitString = stringNumber.split(/,|\n/);
+		}
 
-	var sum = 0,
-		neg = [];
-	
-	for (i = 0; i < splitString.length; i++) {
-		if (parseInt(splitString[i]) < 0) neg.push(splitString[i]);
-		else if (splitString[i] < 1001) sum += parseInt(splitString[i]);
+		var sum = 0,
+			neg = [];
+		
+		for (i = 0; i < splitString.length; i++) {
+			if (parseInt(splitString[i]) < 0) neg.push(splitString[i]);
+			else if (splitString[i] < 1001) sum += parseInt(splitString[i]);
+		}
+		if (neg.length > 0) {
+			throw 'Negatives not allowed: ' + neg;
+		}
+		return sum;
 	}
-	if (neg.length > 0) {
-		throw 'Negatives not allowed: ' + neg;
-	}
-	return sum;
 }
+
 module.exports = {
 	add
 }
