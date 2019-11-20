@@ -24,12 +24,28 @@ it('1, 2\n3\n4 should return 10', () => {
   expect(stringCalc.Add("1,2\n3\n4")).toBe(10);
 });
 
+/*it('should throw Negatives not allowed: ', () => {
+  function testCalc() {
+    stringCalc.Add("-1,2");
+  }
+  expect(testCalc).toThrowError('Negatives not allowed');
+});
+*/
+
 it('-1, 2 should throw Negatives not allowed: -1', () => {
-	expect(stringCalc.Add("1,2")).toEqual(3);
+  expect(stringCalc.Add("-1,2")).toThrowError('Negatives not allowed: -1');
 });
 
+/*it('should throw Negatives not allowed: ', () => {
+  function testCalc() {
+    calc("2,-4,3,-5");
+  }
+  expect(testCalc).toThrowError('Negatives not allowed:');
+});
+*/
+
 it('2, -4, 3, -5 should throw Negatives not allowed: -4,-5', () => {
-	expect(stringCalc.Add("4,5")).toEqual(9);
+  expect(stringCalc.Add("2,-4,3,-5")).toThrowError('Negetives not allowed: -4, -5');
 });
 
 it('1001, 2 should return 2', () => {

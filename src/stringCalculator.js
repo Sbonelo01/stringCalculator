@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = class stringCalculator{
+module.exports = class stringCalculator {
 	Add(stringNumber) {
 		// Return 0 if String is empty.
 		if (!stringNumber) return 0; 
@@ -27,4 +27,3 @@ module.exports = class stringCalculator{
 		return sum;
 	}
 }
-
