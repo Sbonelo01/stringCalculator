@@ -30,17 +30,22 @@ it('1, 2\n3\n4 should return 10', () => {
   expect(stringCalc.Add("1,2\n3\n4")).toBe(10);
 });
 
-it('-1, 2 should throw Negatives not allowed: -1', () => {
-  expect(stringCalc.Add("-1,2")).toThrowError('Negatives not allowed: -1');
+it('Negetive number will throw an exception', () => {
+    expect(()=> {
+      stringCalc.Add('-1,2')
+  }).toThrowError;
 });
 
-it('2, -4, 3, -5 should throw Negatives not allowed: -4,-5', () => {
-  expect(stringCalc.Add("2,-4,3,-5")).toThrowError('Negetives not allowed: -4, -5');
-});
+it('Negetive number will throw an exception', () => {
+    expect(()=> {
+      stringCalc.Add('2, -4, 3, -5')
+    }).toThrowError;
+  });
 
 it('1001, 2 should return 2', () => {
   expect(stringCalc.Add("1001,2")).toBe(2);
 });
+
 it('//;\n1;2 should return 3', () => {
   expect(stringCalc.Add("//;\n1;2")).toBe(3);
 });
