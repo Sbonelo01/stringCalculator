@@ -22,8 +22,8 @@ module.exports = class stringCalculator {
 			if (parseInt(splitString[i]) < 0) neg.push(splitString[i]);
 			else if (splitString[i] < 1001) sum += parseInt(splitString[i]);
 		}
-		if (neg.length < 0){
-			throw new Eror('egetives not allowed' + neg);
+		if (neg.length > 0){
+			throw new Error('Negetives not allowed' + neg);
 		}
 		return sum;
 	}

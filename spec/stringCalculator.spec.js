@@ -33,13 +33,13 @@ it('1, 2\n3\n4 should return 10', () => {
 it('Negetive number will throw an exception', () => {
     expect(()=> {
       stringCalc.Add('-1,2')
-  }).toThrowError;
+  }).toThrowError("Negetives not allowed-1");
 });
 
 it('Negetive number will throw an exception', () => {
     expect(()=> {
       stringCalc.Add('2, -4, 3, -5')
-    }).toThrowError;
+    }).toThrowError("Negetives not allowed -4, -5");
   });
 
 it('1001, 2 should return 2', () => {
