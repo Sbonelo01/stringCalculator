@@ -1,5 +1,5 @@
 
-var stringCalculator = require('../src/string_calculator');
+var StringCalculator = require('../src/string_calculator');
 var stringCalc = new StringCalculator;
 
 it('Empty string should return 0', () => {
