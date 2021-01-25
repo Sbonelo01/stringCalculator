@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = class stringCalculator {
+module.exports = class StringCalculator {
 	
 	Add(stringNumber) {
 		// Return 0 if String is empty.
