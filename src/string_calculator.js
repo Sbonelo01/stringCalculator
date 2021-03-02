@@ -2,8 +2,8 @@
 
 module.exports = class StringCalculator {
 	
-	Add(stringNumber) {
-		// Return 0 if String is empty.
+	add(stringNumber) {
+		// return 0 if String is empty.
 		if (!stringNumber) return 0; 
 	                    
 		if (stringNumber.indexOf("//") == 0) {
