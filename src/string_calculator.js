@@ -14,7 +14,6 @@ module.exports = class StringCalculator {
           stringNumber.length
         ),
         splitString = subString.split(delimiter);
-      console.log(splitString);
     } else {
       var splitString = stringNumber.split(/,|\n/);
     }

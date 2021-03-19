@@ -1,0 +1,23 @@
+{
+  "name": "stringcalculator",
+  "version": "1.0.0",
+  "description": "stringCalculator",
+  "main": "string_calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sbonelo01/stringCalculator.git"
+  },
+  "keywords": [
+    "string",
+    "calculator"
+  ],
+  "author": "Sbonelo Mkhize",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sbonelo01/stringCalculator/issues"
+  },
+  "homepage": "https://github.com/Sbonelo01/stringCalculator#readme"
+}
