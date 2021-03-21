@@ -30,10 +30,11 @@ it('1, 2\n3\n4 should return 10', () => {
   expect(stringCalc.add("1,2\n3\n4")).toBe(10);
 });
 
-it('Negetive number will throw an exception and an error for invalid input', () => {
+it('Throw an exception for negetive number and an error for invalid input', () => {
     expect(()=> {
       stringCalc.add('-1,2')
   }).toThrowError("Negetives not allowed-1");
+//   for invalid input
     expect(()=> {
       stringCalc.add("//;\n1000;1;2;")
     }).toThrowError("ERROR: invalid input")
@@ -57,6 +58,3 @@ it('//;\n1;2,1\n5 should return 9', () => {
   expect(stringCalc.add("//;\n1;2,1\n5")).toBe(9);
 });
 
-// it('should throw an error if input is invalid', () => {
-//   expect(stringCalc.add("//;\n1000;1;2;")).toThrowError("ERROR: invalid input")
-// })
