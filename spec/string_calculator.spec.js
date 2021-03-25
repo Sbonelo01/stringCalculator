@@ -14,6 +14,15 @@ it('1, 2 should return 3', () => {
   expect(stringCalc.add("1,2")).toBe(3);
 });
 
+it('Should ignore numbers > 1000', () => {
+  expect(stringCalc.add("1000,1,2")).toBe(3)
+})
+
+
+it('should accept delimeters of any length', () => {
+  expect(stringCalc.add(n))
+})
+
 it('1, 2, 3, 4 should return 10', () => {
   expect(stringCalc.add("1,2,3,4")).toBe(10);
 });
@@ -34,7 +43,8 @@ it('Throw an exception for negetive number and an error for invalid input', () =
     expect(()=> {
       stringCalc.add('-1,2')
   }).toThrowError("Negetives not allowed-1");
-//   for invalid input
+    
+    // for invalid input
     expect(()=> {
       stringCalc.add("//;\n1000;1;2;")
     }).toThrowError("ERROR: invalid input")
