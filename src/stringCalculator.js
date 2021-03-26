@@ -2,18 +2,18 @@ module.exports = class StringCalculator {
 
   add(str) {
     
-    const isDigit = /\d/
-    const allDigits = /\d*/g
-    const allNonDigits = /\D/g
-    const allNegativeNumbers = /-\d*/g
+    const isDigit = /\d/,
+           allDigits = /\d*/g,
+           allNonDigits = /\D/g,
+           allNegativeNumbers = /-\d*/g
 
-    let sum = 0;
-    let numbers = [];
-    let negativeNumbers = [];
-    let delimeterRegex = /(?<=\/\/)(.*)(?=\n)/g;
-    let multipleDelimiters = /\[[^\]]*]/g;
-    let afterNewline = str.substring(str.indexOf("\n") + 1, str[str.length]);
-    let beforeNewline = str.substring(0, str.indexOf("\n"));
+    let sum = 0,
+        numbers = [],
+        negativeNumbers = [],
+        delimeterRegex = /(?<=\/\/)(.*)(?=\n)/g,
+        multipleDelimiters = /\[[^\]]*]/g,
+        afterNewline = str.substring(str.indexOf("\n") + 1, str[str.length]),
+        beforeNewline = str.substring(0, str.indexOf("\n"))
   
     if (delimeterRegex.test(str)) {
       let delimeter = str.match(delimeterRegex)[0];
